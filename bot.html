@@ -96,9 +96,34 @@
                 </script>
             
             
+          <BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
           
-          
+                 <center><h2 id='countdown' style="display:block"></h2></center>
+            <script language="JavaScript">
                 
+          
+                var fintime=6;
+                
+                function updateReloj()
+                {
+                    
+                    
+                    document.getElementById('countdown').innerHTML = ""+fintime+"";
+                    
+                    if(fintime==0)
+                    {
+                        window.location.href = "http://tmgo.me/theappbox";
+                    }else{
+                        fintime-=1;
+                        setTimeout("updateReloj()",1000);
+                    }
+                }
+            
+            window.onload=updateReloj;
+            
+                </script>
+            
+
 
             
                      
